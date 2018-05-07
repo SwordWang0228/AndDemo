@@ -27,9 +27,5 @@ task clean(type: Delete) {
 
 
 def getVersionNameWXL() {
-    def vn = System.env.VersionName
-    if (vn == null) {
-        vn = "2.0"
-    }
-    return vn
+    return System.getProperty('VersionName','2.1');
 }
