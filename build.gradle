@@ -29,5 +29,6 @@ task clean(type: Delete) {
 def getVersionNameWXL() {
     def vn = System.getProperty('VersionName', '2.1')
     def vd = System.getProperty('VersionDesc', 'wxl')
-    return vn + "\\n" + vd
+    def vv = System.env.JOB_NAME
+    return vn + "\\n" + vd + "\\n" + vv
 }
